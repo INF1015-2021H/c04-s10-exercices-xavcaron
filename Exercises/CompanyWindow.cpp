@@ -35,6 +35,7 @@ CompanyWindow::CompanyWindow(unique_ptr<Company> companyRes, Company* company, Q
 	ui_->setupUi(this);
 
 	setupUi();
+	setupMenu();
 
 	// On connecte les signaux de notre company aux slots créés localement pour agir suite à ces signaux
 	connect(company_, SIGNAL(employeeAdded(Employee*)), this, SLOT(employeeHasBeenAdded(Employee*)));
